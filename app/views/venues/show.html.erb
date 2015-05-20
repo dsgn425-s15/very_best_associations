@@ -36,6 +36,18 @@
           </div>
         </div>
       </div>
+
+      <ul class="list-group">
+        <% @venue.favorites.each do |favorite| %>
+        <li class="list-group-item">
+          <%= favorite.user.username %> liked <%= favorite.dish.name %> at <%= favorite.venue.name %>
+        </li>
+        <% end %>
+      </ul>
+
+
+
+
     </div>
   </div>
 </div>

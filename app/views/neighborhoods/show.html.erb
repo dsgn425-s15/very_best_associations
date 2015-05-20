@@ -34,6 +34,7 @@
         </div>
       </div>
 
+<p> This neighborhood has the following venues: </p>
       <ul class="list-group">
         <% @neighborhood.venues.each do |venue| %>
         <li class="list-group-item">
@@ -42,6 +43,14 @@
         <% end %>
       </ul>
 
+<p> This neighborhood has the following favorites: </p>
+      <ul class="list-group">
+        <% @neighborhood.favorites.each do |favorite| %>
+        <li class="list-group-item">
+          <%= favorite.user.username %> liked <%= favorite.dish.name %> at <%= favorite.venue.name %>
+        </li>
+        <% end %>
+      </ul>
 
 
 
