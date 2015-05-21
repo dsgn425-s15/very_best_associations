@@ -20,6 +20,16 @@
               <dd><%= @venue.neighborhood.name %></dd>
 
             </dl>
+
+            <!-- My code for user story "I want to see a list of favorites for the venue" -->
+            <div class="">
+              <% @venue.favorites.each do |favorite| %>
+                <%= favorite.dish.name %>
+                <%= favorite.user.username %>
+              <% end %>
+            </div>
+            <!-- MISSING BOOTSTRAP STYLING -->
+
             <div class="btn-group btn-group-justified">
               <a href="/venues" class="btn btn-primary">
                 <i class="fa fa-chevron-left"></i>
