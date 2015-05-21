@@ -30,8 +30,19 @@
           </div>
         </div>
       </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Favorites of <%= @user.username %></h3>
+        </div>
+        <ul class="list-group">
+          <% @user.favorites.each do |favorite| %>
+          <li class="list-group-item"><%= favorite.dish.name %> at <%= favorite.venue.name %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
 
 <!-- End responsive panel example -->
