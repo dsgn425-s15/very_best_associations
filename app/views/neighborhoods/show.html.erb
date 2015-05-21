@@ -17,6 +17,25 @@
               <dd><%= @neighborhood.city %></dd>
 
             </dl>
+
+            <!-- My code for user story "I want to see a list of venues in the neighborhood (Part 5)" -->
+            <div class="">
+              <p>List of venues in da neighborhood</p>
+              <% @neighborhood.venues.each do |venue| %>
+                <%= venue.name %>
+              <% end %>
+            </div>
+            <!-- My code for user story "I want to see a list of favorites in the neighborhood (Part 6)" -->
+            <div class="">
+              <p>List of favorites in da neighborhood</p>
+              <% @neighborhood.favorites.each do |favorite| %>
+                <%= favorite.user.username %>
+                <%= favorite.dish.name %>
+                <%= favorite.venue.name %>
+              <% end %>
+            </div>
+            <!-- MISSING BOOTSTRAP STYLING -->
+
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
                 <i class="fa fa-chevron-left"></i>
