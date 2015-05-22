@@ -4,5 +4,10 @@ class Neighborhood < ActiveRecord::Base
 
   has_many :venues
 
+  # Highlight favorite venues in a neighborhood
+
+  has_many :favorites, :through => :venues
+
+
 
 end
