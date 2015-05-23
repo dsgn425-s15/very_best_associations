@@ -194,6 +194,8 @@ Other views that require fixing:
  - favorites#show (displays `user_id`, `dish_id`, and `neighborhood_id`)
  - favorites#index (displays `user_id`, `dish_id`, and `neighborhood_id`)
 
+I STOPPED HERE
+
 ## Part 5: Achieve User Stories
 
 The real power of this app comes from being able to see collections of associated objects. As a user, I want to
