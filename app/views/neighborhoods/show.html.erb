@@ -22,6 +22,14 @@
               <%= venue.name %>
               <br>
               <% end %>
+
+              <dt>Favorites in this Hood</dt>
+              <dd> <% @neighborhood.favorites.each do |favorite| %>
+              <%= favorite.dish.name %> from <%= favorite.venue.name %>
+              <br>
+              <% end %></dd>
+
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
