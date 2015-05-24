@@ -19,6 +19,13 @@
               <dt>Neighborhood</dt>
               <dd><%= @venue.neighborhood.name %></dd>
 
+              <dt>Favorites</dt>
+              <dd>
+              <% @venue.favorites.each do |favorite| %>
+              <%= favorite.user.username.capitalize %> likes the <%= favorite.dish.name %>
+              <br>
+              <% end %>
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/venues" class="btn btn-primary">

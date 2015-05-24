@@ -11,8 +11,14 @@
           <div class="col-md-12">
             <dl class="dl-horizontal">
               <dt>Username</dt>
-              <dd><%= @user.username %></dd>
+              <dd><%= @user.username.capitalize %></dd>
 
+              <dt>My Favorites</dt>
+              <dd>
+              <% @user.favorites.each do |favorite| %>
+              <%= favorite.dish.name.capitalize %> from <%= favorite.venue.name %>
+              <br>
+              <% end %>
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/users" class="btn btn-primary">

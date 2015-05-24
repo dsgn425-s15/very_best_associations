@@ -16,6 +16,12 @@
               <dt>Cuisine</dt>
               <dd><%= @dish.cuisine.name %></dd>
 
+               <dt>Favorites</dt>
+            <dd>
+              <% @dish.favorites.each do |favorite| %>
+              <%= favorite.user.username.capitalize %> prefers the <%= @dish.name.downcase %> from <%= favorite.venue.name %>
+              <br>
+              <% end %>
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/dishes" class="btn btn-primary">
