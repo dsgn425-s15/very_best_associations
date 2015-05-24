@@ -1,2 +1,4 @@
 class Neighborhood < ActiveRecord::Base
-end
+ validates :name, :presence => true, :uniqueness => { :scope => :city }
+ has_many : venues
+ end
