@@ -32,6 +32,12 @@
             </div>
           </div>
         </div>
+        <p> </p>
+        <h4> All venues: </h4>
+        <% @neighborhood.venues.each do |venue| %>
+          <li> <%= venue.name %></li>
+        <% end %>
+
       </div>
     </div>
   </div>
