@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Neighborhood #<%= @neighborhood.id %></h3>
+        <h3 class="panel-title"><%= @neighborhood.name %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -38,3 +38,30 @@
 </div>
 
 <!-- End responsive panel example -->
+
+<!-- Start Addition of Panel -->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Venues in <%= @neighborhood.name %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <ul class="list-group">
+                  <% @neighborhood.venues.each do |venue| %>
+                    <li class="list-group-item">
+                      <%= venue.name %>
+                    </li>
+                  <% end %>
+                  </ul>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
