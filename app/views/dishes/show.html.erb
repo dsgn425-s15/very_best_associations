@@ -37,7 +37,7 @@
         <ul class="list-group">
          <% @dish.favorites.each do |favorite| %>
            <li class="list-group-item">
-              <%= favorite.user.username %> likes <%= favorite.venue.name %>
+              <%= favorite.user.username.capitalize %> likes <%= favorite.venue.name %>
             </li>
           <% end %>
         </ul>
