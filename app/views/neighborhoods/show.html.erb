@@ -42,7 +42,16 @@
       <% end %>
       </ul>
 
+
+
     </div>
+    <ul class="list-group">
+      <% @neighborhood.favorites.each do |favorite| %>
+        <li class="list-group-item">
+          <%= favorite.venue.name %> has amazing <%= favorite.dish.name %>
+        </li>
+      <% end %>
+      </ul>
   </div>
 </div>
 
