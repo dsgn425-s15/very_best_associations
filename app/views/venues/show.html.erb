@@ -32,10 +32,20 @@
               <a href="/delete_venue/<%= @venue.id %>" class="btn btn-danger" rel="nofollow">
                 <i class="fa fa-trash-o"></i>
               </a>
+
             </div>
           </div>
         </div>
       </div>
+
+       <ul class="list-group">
+          <% @venue.favorites.each do |favorite| %>
+          <li class="list-group-item">
+          <%= favorite.user.username.capitalize %> likes <%= favorite.dish.name %>
+           </li>
+          <% end %>
+       </ul>
+
     </div>
   </div>
 </div>

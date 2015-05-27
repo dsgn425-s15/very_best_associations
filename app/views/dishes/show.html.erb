@@ -33,6 +33,13 @@
           </div>
         </div>
       </div>
+        <ul style="list-style-type:circle">
+          <% @dish.favorites.each do |favorite| %>
+          <li  >
+          <%= favorite.user.username.capitalize %> likes <%= favorite.venue.name %>
+           </li>
+          <% end %>
+       </ul>
     </div>
   </div>
 </div>
