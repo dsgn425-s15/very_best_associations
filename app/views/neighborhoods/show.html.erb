@@ -33,6 +33,14 @@
           </div>
         </div>
       </div>
+      <ul class="list-group">
+      <% @neighborhood.venues.each do |venue| %>
+      <li class ="list-group-item"><%= venue.name %></li>
+      <% end %>
+      <% @neighborhood.favorites.each do |favorite| %>
+      <li class ="list-group-item"><%= favorite.user.username %> likes the <%= favorite.dish.name %> at <%= favorite.venue.name %> </li>
+      <% end %>
+      </ul>
     </div>
   </div>
 </div>
