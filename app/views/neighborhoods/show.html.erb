@@ -24,6 +24,12 @@
                 <% end  %>
             </ul>
 
+            <ul> <h4>Favorites</h4>
+              <% @neighborhood.favorites.each do |favorite| %>
+              <li><%= favorite.dish.name %> at <%= favorite.venue.name %> by <%= favorite.user.username %></li>
+                <% end  %>
+            </ul>
+
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
                 <i class="fa fa-chevron-left"></i>
