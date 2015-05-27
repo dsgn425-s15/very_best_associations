@@ -17,6 +17,13 @@
               <dd><%= @neighborhood.city %></dd>
 
             </dl>
+
+            <ul> <h4>Venues</h4>
+              <% @neighborhood.venues.each do |venue| %>
+              <li><%= venue.name %> </li>
+                <% end  %>
+            </ul>
+
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
                 <i class="fa fa-chevron-left"></i>
