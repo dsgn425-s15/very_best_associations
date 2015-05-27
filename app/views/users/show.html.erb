@@ -16,13 +16,19 @@
             </dl>
 
             <!-- My code for user story "I want to see a list of favorites for the user" -->
-            <div class="">
-              <% @user.favorites.each do |favorite| %>
-                <%= favorite.dish.name %>
-                <%= favorite.venue.name %>
-              <% end %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">User's favorites</h4>
+              </div>
+              <div class="panel-body">
+                <dl class="dl-horizontal">
+                  <% @user.favorites.each do |favorite| %>
+                    <dt><%= favorite.dish.name %></dt>
+                    <dd><%= favorite.venue.name %></dd>
+                  <% end %>
+                </dl>
+              </div>
             </div>
-            <!-- MISSING BOOTSTRAP STYLING -->
 
             <div class="btn-group btn-group-justified">
               <a href="/users" class="btn btn-primary">

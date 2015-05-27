@@ -16,16 +16,12 @@
               <dt>Cuisine</dt>
               <dd><%= @dish.cuisine.name %></dd>
 
-            </dl>
-
-            <!-- My code for user story "I want to see a list of favorites for the dish" -->
-            <div class="">
+              <!-- My code for user story "I want to see a list of favorites for the dish" -->
+              <dt>Favorites</dt>
               <% @dish.favorites.each do |favorite| %>
-                <%= favorite.venue.name %>
-                <%= favorite.user.username %>
+                <dd><%= favorite.venue.name %> - <%= favorite.user.username %></dd>
               <% end %>
-            </div>
-            <!-- MISSING BOOTSTRAP STYLING -->
+            </dl>
 
             <div class="btn-group btn-group-justified">
               <a href="/dishes" class="btn btn-primary">
