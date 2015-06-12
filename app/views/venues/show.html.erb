@@ -17,9 +17,15 @@
               <dd><%= @venue.address %></dd>
 
               <dt>Neighborhood</dt>
-              <dd><%= @venue.neighborhood_id %></dd>
+              <dd><%= @venue.neighborhood.name %></dd>
 
+              <!-- My code for user story "I want to see a list of favorites for the venue" -->
+              <dt>Favorites</dt>
+              <% @venue.favorites.each do |favorite| %>
+                <dd><%= favorite.dish.name %> - <%= favorite.user.username %></dd>
+              <% end %>
             </dl>
+
             <div class="btn-group btn-group-justified">
               <a href="/venues" class="btn btn-primary">
                 <i class="fa fa-chevron-left"></i>
