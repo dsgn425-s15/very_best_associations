@@ -13,6 +13,12 @@
               <dt>Username</dt>
               <dd><%= @user.username %></dd>
 
+            <ul> <h4>Favorites</h4>
+              <% @user.favorites.each do |favorite| %>
+              <li><%= favorite.dish.name %> at <strong><%= favorite.venue.name %></strong> </li>
+                <% end  %>
+            </ul>
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/users" class="btn btn-primary">
