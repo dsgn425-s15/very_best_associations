@@ -29,6 +29,12 @@
             </div>
           </div>
         </div>
+
+          <p> </p>
+        <% @user.favorites.each do |fave| %>
+          <li> <%= fave.dish.name %> at <%= fave.venue.name %> </li>
+        <% end %>
+
       </div>
     </div>
   </div>

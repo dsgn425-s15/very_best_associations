@@ -14,7 +14,7 @@
               <dd><%= @dish.name %></dd>
 
               <dt>Cuisine</dt>
-              <dd><%= @dish.cuisine_id %></dd>
+              <dd><%= @dish.cuisine.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -32,6 +32,11 @@
             </div>
           </div>
         </div>
+        <p> </p>
+        <% @dish.favorites.each do |fave| %>
+          <li> <%= fave.user.username %> likes <%= fave.venue.name %> </li>
+        <% end %>
+
       </div>
     </div>
   </div>
