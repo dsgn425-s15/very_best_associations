@@ -11,7 +11,7 @@
           <div class="col-md-12">
             <dl class="dl-horizontal">
               <dt>Username</dt>
-              <dd><%= @user.username %></dd>
+              <dd><%= @user.username.capitalize %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -29,6 +29,16 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" ><strong><%= @user.username.capitalize %> likes:</strong></div>
+        <ul class="list-group">
+         <% @user.favorites.each do |favorite| %>
+           <li class="list-group-item">
+              <%= favorite.dish.name %> at <%= favorite.venue.name %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
