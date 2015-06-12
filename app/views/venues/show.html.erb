@@ -17,7 +17,7 @@
               <dd><%= @venue.address %></dd>
 
               <dt>Neighborhood</dt>
-              <dd><%= @venue.neighborhood_id %></dd>
+              <dd><%= @venue.neighborhood.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -36,6 +36,14 @@
           </div>
         </div>
       </div>
+        <div class="list-group">
+          <% @venue.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading"><%= favorite.dish.name %></h4>
+            <p class="list-group-item-text"><%= favorite.user.username %></p>
+          </li>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
