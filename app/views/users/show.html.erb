@@ -13,6 +13,17 @@
               <dt>Username</dt>
               <dd><%= @user.username %></dd>
 
+              <dt><%= @user.username %>'s Favorites:</dt>
+              <dd>
+               <ul class="list-group">
+                    <%= @user.favorites.each do |favorite| %>
+                      <li class="list-group-item">
+                        The <%=  favorite.dish.name %> at <%=  favorite.venue.name %>!
+                      </li>
+                    <% end %>
+                </ul>
+              </dd>
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/users" class="btn btn-primary">
