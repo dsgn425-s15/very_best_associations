@@ -16,6 +16,28 @@
               <dt>City</dt>
               <dd><%= @neighborhood.city %></dd>
 
+              <dt>Venues in the Area:</dt>
+              <dd>
+               <ul class="list-group">
+                    <%= @neighborhood.venues.each do |venue| %>
+                      <li class="list-group-item">
+                        <%=  venue.name %>
+                      </li>
+                    <% end %>
+                </ul>
+              </dd>
+
+              <dt>Favorite Dishes in the Neighborhood:</dt>
+              <dd>
+               <ul class="list-group">
+                    <%= @neighborhood.favorites.each do |favorite| %>
+                      <li class="list-group-item">
+                        The <%=  favorite.dish.name %> at the <%=  favorite.venue.name %>!
+                      </li>
+                    <% end %>
+                </ul>
+              </dd>
+
             </dl>
             <div class="btn-group btn-group-justified">
               <a href="/neighborhoods" class="btn btn-primary">
