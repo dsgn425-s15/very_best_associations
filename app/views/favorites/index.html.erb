@@ -25,13 +25,13 @@
       <div class="panel-body">
         <dl>
           <dt>User</dt>
-          <dd><%= favorite.user_id %></dd>
+          <dd><%= favorite.user.try(:username) %></dd>
 
           <dt>Dish</dt>
-          <dd><%= favorite.dish_id %></dd>
+          <dd><%= favorite.dish.try(:name) %></dd>
 
           <dt>Venue</dt>
-          <dd><%= favorite.venue_id %></dd>
+          <dd><%= favorite.venue.try(:name) %></dd>
 
           <dt>Notes</dt>
           <dd><%= favorite.notes %></dd>

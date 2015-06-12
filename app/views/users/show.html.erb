@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">User #<%= @user.id %></h3>
+        <h3 class="panel-title"><%= @user.username %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -29,9 +29,28 @@
             </div>
           </div>
         </div>
-      </div>
+       </div>
+
+      <ul class="list-group">
+      <% @user.favorites.each do |favorite| %>
+        <li class="list-group-item">
+          <%= favorite.dish.name %> at <%= favorite.venue.name %>
+         </li>
+         <% end %>
+         </ul>
+</div>
+</div>
+</div>
+
+<ul class="list-group">
+<% @dish.favorites.each do |favorite| %>
+  <li class="list-group-item">
+    <%favorite.user.username %> likes <%= favorite.venue.name %>
+    </li>
+    <% end %>
+    </ul>
+
     </div>
   </div>
 </div>
-
 <!-- End responsive panel example -->
