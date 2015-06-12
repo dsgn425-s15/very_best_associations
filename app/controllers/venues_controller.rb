@@ -1,15 +1,17 @@
 class VenuesController < ApplicationController
   def index
     @venues = Venue.all
-  end
+    end
 
   def show
     @venue = Venue.find(params[:id])
-  end
+    end
 
   def new
     @venue = Venue.new
   end
+
+
 
   def create
     @venue = Venue.new
