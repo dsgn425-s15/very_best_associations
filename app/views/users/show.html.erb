@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">User #<%= @user.id %></h3>
+        <h3 class="panel-title"><%= @user.username %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -35,3 +35,29 @@
 </div>
 
 <!-- End responsive panel example -->
+<!-- Start Addition of Panel -->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Favorites for <%= @user.username %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <ul class="list-group">
+                  <% @user.favorites.each do |favorites| %>
+                    <li class="list-group-item">
+                      <%= favorites.dish.name %> at <%= favorites.venue.name %>
+                    </li>
+                  <% end %>
+                  </ul>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
